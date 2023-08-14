@@ -23,8 +23,14 @@ public abstract class Transport implements Service {
                 '}';
     }
 
+
     @Override
     public void doService() {
         System.out.println("Обслуживаем " + this.getModelName());
+        for (int i = 0; i < this.getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку");
+        }
     }
+
 }
+
